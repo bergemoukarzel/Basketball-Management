@@ -1,1 +1,20 @@
 <h1>Basketball Players</h1>
+
+<table>
+    <tr>
+        <th>
+            Top Players
+        </th>
+    </tr>
+    {%for task in object_list %}
+    <tr>
+        <td>
+            {{task.title}}
+        </td>
+    </tr>
+    {% empty %}
+    <h3>
+        No players in the team
+    </h3>
+    {% endfor %}
+</table>
