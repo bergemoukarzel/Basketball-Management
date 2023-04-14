@@ -2,15 +2,13 @@
 
 <table>
     <tr>
-        <th>
-            Top Players
-        </th>
+        <th>Main Players</th>
+        <th></th>
     </tr>
-    {%for task in object_list %}
+    {%for player in Players %}
     <tr>
-        <td>
-            {{task.title}}
-        </td>
+        <td>{{player.title}}</td>
+        <td><a href="{% url 'player' player.id %}">View</a></td>
     </tr>
     {% empty %}
     <h3>

@@ -1,5 +1,6 @@
 from django.urls import path 
-from .views  import TaskList
+from .views  import PlayerList, TaskDetail
 urlpatterns = [
-    path('', TaskList.as_view(), name = 'players'),
+    path('', PlayerList.as_view(), name = 'BasketballPlayers'),
+    path('player/<int:pk>/', TaskDetail.as_view(), name='player'),
 ]
