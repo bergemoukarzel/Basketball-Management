@@ -8,7 +8,9 @@
     {%for player in players %}
     <tr>
         <td>{{ player.title }}</td>
-        <td><a href="{% url 'players' player.id %}">View</a></td>
+        <td><a href="{% url 'player' player.id %}">View</a></td>
+        <td><a href="{% url 'player-update' player.id %}">Edit</a></td>
+        <td><a href="{%url 'player-delete' player.id%} ">Delete</a></td>
     </tr>
     {% empty %}
     <h3>

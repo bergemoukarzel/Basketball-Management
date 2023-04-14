@@ -1,4 +1,5 @@
-<h3>player Form</h3>
+<h3>Player Form</h3>
+<a href = "{% url 'BasketballPlayers' %}">Go Back</a>
 <form method="POST" action="">
     {%csrf_token %}
     {{form.as_p}}
