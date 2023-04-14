@@ -1,9 +1,10 @@
 from django.urls import path
-from .views  import PlayerList, PlayerDetail, PlayerCreate, PlayerUpdate, PlayerDelete, CustomLoginView
+from .views  import PlayerList, PlayerDetail, PlayerCreate, PlayerUpdate, PlayerDelete, CustomLoginView, RegisterPage
 from django.contrib.auth.views import LogoutView
 urlpatterns = [
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page= 'login'), name='logout'),
+    path('register/', RegisterPage.as_view(), name= 'register'),
     path('', PlayerList.as_view(), name = 'BasketballPlayers'),
     path('player/<int:pk>/', PlayerDetail.as_view(), name='player'),
     path('player-create/', PlayerCreate.as_view(), name = 'player-create'),
