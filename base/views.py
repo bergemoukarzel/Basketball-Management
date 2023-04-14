@@ -19,6 +19,13 @@ class PlayerList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'players'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        #check if players or BasketballPlayers
+        context['players'] = context['players'].filter(user=self.request.user)
+        #context['count'] = context['players'].filter(complete=False).count()
+        return context
+
 class PlayerDetail(LoginRequiredMixin, DetailView):
     model = Task
     context_object_name = 'player'
@@ -26,15 +33,19 @@ class PlayerDetail(LoginRequiredMixin, DetailView):
 
 class PlayerCreate(LoginRequiredMixin, CreateView):
     model = Task
-    #field = ['title', 'description']
-    fields = '__all__'
+    fields = ['title', 'description']
+    #fields = '__all__'
     success_url = reverse_lazy('BasketballPlayers')
     #or players
     template_name = 'base/Player_form.html'
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(PlayerCreate, self).form_valid(form)
+
 class PlayerUpdate(LoginRequiredMixin, UpdateView):
     model = Task
-    fields ='__all__'
+    fields = ['title', 'description']
     success_url = reverse_lazy('BasketballPlayers')
     template_name = 'base/Player_form.html'
 
