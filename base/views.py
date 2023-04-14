@@ -4,6 +4,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Task
 
 class CustomLoginView(LoginView):
@@ -14,16 +15,16 @@ class CustomLoginView(LoginView):
       return reverse_lazy('BasketballPlayers')
 
 
-class PlayerList(ListView):
+class PlayerList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'players'
 
-class PlayerDetail(DetailView):
+class PlayerDetail(LoginRequiredMixin, DetailView):
     model = Task
     context_object_name = 'player'
     template_name = 'base/player.html'
 
-class PlayerCreate(CreateView):
+class PlayerCreate(LoginRequiredMixin, CreateView):
     model = Task
     #field = ['title', 'description']
     fields = '__all__'
@@ -31,13 +32,13 @@ class PlayerCreate(CreateView):
     #or players
     template_name = 'base/Player_form.html'
 
-class PlayerUpdate(UpdateView):
+class PlayerUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     fields ='__all__'
     success_url = reverse_lazy('BasketballPlayers')
     template_name = 'base/Player_form.html'
 
-class PlayerDelete(DeleteView):
+class PlayerDelete(LoginRequiredMixin, DeleteView):
     model = Task
     context_object_name = 'player'
     template_name = 'base/player_confirm_delete.html'
