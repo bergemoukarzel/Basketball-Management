@@ -1,0 +1,74 @@
+<html>
+
+    <head>
+
+        <style type="text/css">
+
+            .nav{
+                height:70px;
+                width:100%;
+                position:fixed;
+                z-index:1;
+                top:0px;
+                background-color:#C0C0C0;
+                overflow-y:hidden;
+            }
+
+            .navbar{
+                height:100px;
+                width:100%;
+                position:fixed;
+                z-index:1;
+                top:70px;
+                background-color:#CCCCCC;
+                overflow-y:hidden;
+            }
+            
+            .navbar a {
+                padding:40px 8px 6px 16px;
+                text-decoration:none;
+                font-size:25px;
+                color: #FF6600;
+                display:inline-block;
+            }
+            .navbar a:hover {
+                padding:40px 8px 6px 16px;
+                text-decoration:none;
+                font-size:25px;
+                color: #ff8800;
+                display:inline-block;
+            }
+
+            .main {
+                margin-top:170px;
+                padding:0px 0px 5px 2px;
+            }
+
+        </style>
+
+        <title>My Website</title>
+        
+    </head>
+    
+    <body>
+        
+        <div class="nav">
+            <h1 style="color:#CC6600;margin-left:10px;display:inline-block">Basketball Manager</h1>
+            <p style="float:right;margin-right:30px;"><a href="/logout">Logout</a></p>
+            <p style="float:right;padding-right:10px;color:#CC6600;">Admin {{user}}</p>
+        </div>
+        
+        <div class = "navbar">
+            <a href="/ad/home" style="margin-left:300px;">Home</a>
+            <a href="/ad/games">Games</a>
+            <a href="/ad/roster">Roster</a>
+        </div>
+
+        <div class = "main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </body>
+
+</html>

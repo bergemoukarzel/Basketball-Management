@@ -1,0 +1,41 @@
+<html>
+
+    <head>
+
+        <style type="text/css">
+
+            .nav{
+                height:70px;
+                width:100%;
+                position:fixed;
+                z-index:1;
+                top:0px;
+                background-color:#C0C0C0;
+                overflow-y:hidden;
+            }
+
+            .main {
+                margin-top:170px;
+                padding:0px 0px 5px 2px;
+            }
+
+        </style>
+
+        <title>My Website</title>
+        
+    </head>
+    
+    <body>
+        
+        <div class="nav">
+            <h1 style="color:#CC6600;margin-left:10px;">Basketball Manager</h1>
+        </div>
+
+        <div class = "main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </body>
+
+</html>

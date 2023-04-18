@@ -1,0 +1,15 @@
+{% extends 'base/admin.html' %}
+
+
+{% block content %}
+{% if team == player.team %}
+
+
+<h1>Player Name: {{player.name}}</h1>
+<h2>Team: {{player.team.name}}</h2>
+<p>Stats: {{player.stats}}</p>
+<a href = "{% url 'rosterAdmin' %}">Go Back</a>
+
+
+{% endif %}
+{% endblock %}

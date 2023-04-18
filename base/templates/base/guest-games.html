@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    
+    <h1>Schedule</h1>
+    
+    <ul>
+        {% for i in i.game_set.all %}
+
+            {% if i.practice == True %}
+            {% if i.complete == True %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}" checked>Practice: {{i.date}}
+            </li>
+            {% else %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}">Practice: {{i.date}}
+            </li>
+            {% endif %}
+            
+            {% else %}
+            {% if i.complete == True %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}" checked>{{i.team1}} vs {{i.team2}} {{i.date}}
+            </li>
+            {% else %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}">{{i.team1}} vs {{i.team2}} {{i.date}}
+            </li>
+            {% endif %}
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+    <hr></hr>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base/player.html' %}
+
+{% block content %}
+    
+    <h1>Players</h1>
+    
+    {% for i in t.player_set.all %}
+        <ul>
+            <li>{{i.name}}</li>
+        </ul>
+    {% endfor %}
+
+    <hr></hr>
+
+    <h1>Coaches</h1>
+    
+    {% for i in t.coach_set.all %}
+        <ul>
+            <li>{{i.name}}</li>
+        </ul>
+    {% endfor %}
+
+    
+{% endblock %}

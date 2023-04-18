@@ -1,0 +1,52 @@
+{% extends 'base/admin.html' %}
+
+{% block content %}
+    
+    <h2>Players</h2>
+
+    <form method="GET">
+        <input type="text" name='search-area' value="{{search_input}}">
+        <input type="submit" value='Search'>
+    
+    </form>
+    
+    {% for player in players %}
+        <ul>
+            <li>{{player.name}}</li>
+            <td><a href="{% url 'updatePlayerAdmin' player.id %}">Update</a></td>
+            <td><a href="{% url 'detailsPlayerAdmin' player.id %}">View</a></td>
+            <td><a href="{% url 'deletePlayerAdmin' player.id %}">Delete</a></td>
+        </ul>
+        {% empty %}
+        <h3>
+            No players in the team
+        </h3>
+    {% endfor %}
+
+    <a href = "{% url 'createPlayerAdmin' %}">Add Player</a>
+
+    <hr></hr>
+
+    <h2>Coaches</h2>
+
+    <form method="GET">
+        <input type="text" name='search' value="{{search_in}}">
+        <input type="submit" value='Search'>
+    
+    </form>
+    
+    {% for coach in coach %}
+        <ul>
+            <li>{{coach.name}}</li>
+        </ul>
+        {% empty %}
+        <h3>
+            No coaches in the team
+        </h3>
+    {% endfor %}
+    
+    <a href = "{% url 'createCoachAdmin' %}">Add Coach</a>
+
+    
+
+{% endblock %}

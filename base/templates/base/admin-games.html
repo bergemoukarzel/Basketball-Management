@@ -1,0 +1,55 @@
+{% extends 'base/admin.html' %}
+
+{% block content %}
+    
+    <h1>Schedule</h1>
+    
+    <form method = "post" action = "#">
+    {% csrf_token %}
+    <ul>
+        {% for i in d %}
+
+            {% if i.practice == True %}
+            {% if i.complete == True %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}" checked>Practice: {{i.date}}
+            </li>
+            {% else %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}">Practice: {{i.date}}
+            </li>
+            {% endif %}
+            
+            {% else %}
+            {% if i.complete == True %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}" checked>{{i.team1}} vs {{i.team2}} {{i.date}}
+            </li>
+            {% else %}
+            <li>
+                <input type="checkbox", value="clicked", name="c{{i.id}}">{{i.team1}} vs {{i.team2}} {{i.date}}
+            </li>
+            {% endif %}
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+    <hr></hr>
+
+    <button type="submit" name="save" value="save">Save As Complete</button>  <button type="submit" name="del" value="del">Delete Selected</button>
+    <p>Team: </p><input type="text", name="game">
+    <p>Date: </p><input type="datetime", name="date">
+    <br></br>
+    <button type = "submit" name = "newGame" value = "newGame">Add Game</button>
+    </form>
+
+
+    <form method="post">
+    {% csrf_token %}
+    <br></br>
+    <p>Date: </p><input type="datetime", name="pdate">
+    <br></br>
+    <button type = "submit" name = "newPractice" value = "newPractice">Add Practice</button>
+    </form>
+
+{% endblock %}

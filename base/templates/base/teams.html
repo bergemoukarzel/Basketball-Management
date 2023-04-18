@@ -1,0 +1,14 @@
+{% extends 'base/base-teams.html' %}
+
+{% block content %}
+    
+
+    {% for team in t %}
+    <ul>
+    <li>{{team.name}} <a href="/home/{{team.id}}">Visit as guest</a></li>
+    </ul>
+    {% endfor %}
+
+    <p>Create Team <a href="/teams/create">here</a></p>
+
+{% endblock %}

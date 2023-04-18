@@ -1,0 +1,16 @@
+{% extends 'base/admin.html' %}
+
+
+{% block content %}
+{% if team == player.team %}
+
+<h3>Player Form</h3>
+<a href = "{% url 'rosterAdmin' %}">Go Back</a>
+<form method="POST" action="">
+    {%csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+
+{% endif %}
+{% endblock %}

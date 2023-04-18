@@ -1,0 +1,13 @@
+{% extends 'base/admin.html' %}
+
+{% block content %}
+
+<h3>Coach Form</h3>
+<a href = "{% url 'rosterAdmin' %}">Go Back</a>
+<form method="POST" action="">
+    {%csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

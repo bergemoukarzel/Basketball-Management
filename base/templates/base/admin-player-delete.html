@@ -1,0 +1,18 @@
+{% extends 'base/admin.html' %}
+
+
+{% block content %}
+{% if team == player.team %}
+
+<a href = "{% url 'rosterAdmin' %}"></a>
+<form method = "POST">
+    {%csrf_token%}
+    <p>Are you sure you want to delete this player? "{{player.name}}"</p>
+    <a href = "{% url 'rosterAdmin' %}">Go Back</a>
+    <input type="submit" value="Delete"/>
+
+</form>
+
+
+{% endif %}
+{% endblock %}

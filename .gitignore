@@ -1,0 +1,18 @@
+# Python files
+*.pyc
+__pycache__/
+
+# Django files
+*.log
+*.pot
+*.pyc
+*.swp
+*.swo
+media/
+
+# Database files
+*.sqlite3
+
+# IDE files
+.vscode/
+*.idea/
