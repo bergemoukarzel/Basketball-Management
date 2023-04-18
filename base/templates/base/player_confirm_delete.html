@@ -1,0 +1,8 @@
+<a href = "{% url 'BasketballPlayers' %}"></a>
+<form method = "POST">
+    {%csrf_token%}
+    <p>Are you sure you want to delete this player? "{{player}}"</p>
+    <a href = "{% url 'BasketballPlayers' %}">Go Back</a>
+    <input type="submit" value="Delete"/>
+
+</form>

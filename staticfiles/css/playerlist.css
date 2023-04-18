@@ -1,0 +1,103 @@
+/* Reset some default form styles */
+form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Center the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Style the form title */
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style the "Add Player" link */
+a {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Style the "Add Player" link on hover */
+a:hover {
+    color: #ffcc00;
+}
+
+/* Style the search form */
+form[method="GET"] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Style the search input */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #333;
+    margin-right: 10px;
+    width: 300px;
+}
+
+/* Style the search submit button */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the search submit button on hover */
+input[type="submit"]:hover {
+    background-color: #ffa700;
+}
+
+/* Style the players table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style the table header */
+th {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+}
+
+/* Style the table rows */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style the table links */
+a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Style the table links on hover */
+a:hover {
+    color: #ffcc00;
+}
