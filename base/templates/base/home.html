@@ -1,0 +1,45 @@
+{% load static %}
+<link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+
+<head>
+    <title>Basketball Management</title>
+   
+</head>
+<body>
+    <header>
+        <h1>Basketball Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#scores">Scores</a></li>
+            <li><a href="#players">Players</a></li>
+        </ul>
+    </nav>
+    <section id="scores">
+        <h2>Scores</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Team 1</th>
+                <th>Team 2</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>April 17, 2023</td>
+                <td>Team A</td>
+                <td>Team B</td>
+                <td>102 - 95</td>
+            </tr>
+            <!-- Add more rows for additional scores -->
+        </table>
+    </section>
+    <section id="players">
+        <h2>Players</h2>
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <!-- Add more list items for additional players -->
+        </ul>
+    </section>
+</body>
