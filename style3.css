@@ -1,0 +1,59 @@
+/* games/static/games/css/styles.css */
+
+/* Custom basketball styles */
+/*gameschedule */
+
+body {
+  background-color: #F3CD05;
+}
+
+.game-card {
+  background-color: #F4F4F4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.game-card h4 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.game-card p {
+  margin: 0;
+}
+
+.game-card span {
+  font-weight: bold;
+}
+
+.game-card .team-logo {
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+
+/* Bootstrap styles */
+
+.navbar {
+  background-color: #0D2B50 !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #0D2B50;
+  border-color: #0D2B50;
+}
+
+.btn-primary:hover {
+  background-color: #0A1E38;
+  border-color: #0A1E38;
+}
+.basketball-background {
+background-image: url("images\gamesched");
+background-size: cover;
+background-position: center;
+}
+  

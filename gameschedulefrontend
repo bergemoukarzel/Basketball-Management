@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basketball Game Schedule</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Style for the calendar */
+		#calendar {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			margin: 10px auto;
+			width: 100%;
+			max-width: 800px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+		}
+
+		#calendar h2 {
+			text-align: center;
+			margin-bottom: 10px;
+			color: #333;
+		}
+
+		#calendar table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		#calendar table th {
+			text-align: center;
+			background-color: #eee;
+			color: #333;
+			padding: 5px;
+			font-weight: normal;
+		}
+
+		#calendar table td {
+			text-align: center;
+			padding: 5px;
+			border: 1px solid #eee;
+			color: #666;
+		}
+
+		#calendar table td:hover {
+			background-color: #f0f0f0;
+			cursor: pointer;
+		}
+
+		#calendar .today {
+			background-color: #6d9eeb;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		/* Style for the closest game */
+		#closest-game {
+			margin: 10px auto;
+			width: 100%;
+			max-width: 800px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+		}
+
+		#closest-game h2 {
+			text-align: center;
+			margin-bottom: 10px;
+			color: #333;
+		}
+
+		#closest-game p {
+			text-align: center;
+			font-size: 1.2em;
+			color: #666;
+		}
+
+		#closest-game .game-title {
+			font-weight: bold;
+			color: #333;
+		}
+
+		#closest-game .game-date {
+			font-weight: bold;
+			color: #6d9eeb;
+		}
+	</style>
+</head>
+<body>
+	<!-- Calendar -->
+	<div id="calendar">
+		<h2>Upcoming Games</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Sun</th>
+					<th>Mon</th>
+					<th>Tue</th>
+					<th>Wed</th>
+					<th>Thu</th>
+					<th>Fri</th>
+					<th>Sat</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+										<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Closest Game -->
+	<div id="closest-game">
+		<h2>Closest Game</h2>
+		<p>The closest game is:</p>
+		<p class="game-title">New York Knicks vs. Los Angeles Lakers</p>
+		<p class="game-date">April 21, 2023 - 7:30 PM EST</p>
+	</div>
+</body>
+</html>
+

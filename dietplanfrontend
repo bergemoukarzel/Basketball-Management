@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diet Plan</title>
+  <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+  <h1>Diet Plan</h1>
+  <form method="POST">
+   
+    <label for="id_height">Height (in cm):</label>
+    <input type="number" name="height" id="id_height" required><br><br>
+
+    <label for="id_weight">Weight (in kg):</label>
+    <input type="number" name="weight" id="id_weight" required><br><br>
+
+    <label for="id_age">Age:</label>
+    <input type="number" name="age" id="id_age" required><br><br>
+
+    <label for="id_fitness_goal">Fitness Goal:</label>
+    <select name="fitness_goal" id="id_fitness_goal">
+      <option value="lose_weight">Lose Weight</option>
+      <option value="gain_muscle">Gain Muscle</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  
+    <h2>Your Meal Plan:</h2>
+    <ul>
+      
+      <li></li>
+     
+    </ul>
+  
+</body>
+</html>

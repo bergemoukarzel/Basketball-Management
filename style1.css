@@ -1,0 +1,119 @@
+/* games/static/games/css/styles.css */
+/* homepage */
+/* Set background color */
+body {
+  background-color: orange;
+}
+
+/* Set size and color of sign up and login buttons */
+.button-container {
+  text-align: center;
+}
+
+.signup-button, .login-button {
+  font-size: 24px;
+  color: black;
+  
+}
+
+/* Set size and color of other buttons */
+.other-button {
+  font-size: 16px;
+  color: black;
+}
+
+/* Center website name and sign up/login buttons */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Arrange other buttons in rows and columns */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+.feature {
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; /* adjust the value as needed */
+  }
+  .col-md-4.text-center {
+    text-align: center;
+  }

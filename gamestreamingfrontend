@@ -1,0 +1,17 @@
+/* games/templates/base.html */
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basketball Game Livestreaming</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<h1>Game Livestreaming</h1>
+		<p>Watch the game live and never miss a moment!</p>
+	</div>
+	<div id="video-container">
+		<video src="your_video_source_here.mp4" controls></video>
+	</div>
+</body>
+</html>
