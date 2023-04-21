@@ -1,0 +1,37 @@
+{%if request.user.is_authenticated %}
+<p>{{request.user}}</p>
+<a href="{%url 'logout'%}">Logout</a>
+{% else %}
+<a href="{%url 'login'%}">Login</a>
+{% endif %}
+
+<hr>
+<h1>Basketball Players </h1>
+
+
+<a href = "{% url 'player-create'%}">Add Player</a>
+
+<form method="GET">
+    <input type="text" name='search-area' value="{{search_input}}">
+    <input type="submit" value='Search'>
+
+</form>
+
+<table>
+    <tr>
+        <th>Main Players</th>
+        <th></th>
+    </tr>
+    {%for player in players %}
+    <tr>
+        <td>{{ player.title }}</td>
+        <td><a href="{% url 'player' player.id %}">View</a></td>
+        <td><a href="{% url 'player-update' player.id %}">Edit</a></td>
+        <td><a href="{%url 'player-delete' player.id%} ">Delete</a></td>
+    </tr>
+    {% empty %}
+    <h3>
+        No players in the team
+    </h3>
+    {% endfor %}
+</table>
